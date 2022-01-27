@@ -18,17 +18,22 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function() {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function() {
     return view('about', [
+        "title" => "About",
         "nama" => "Muhammad Faris H",
         "email" => "3103120145@smktelkom-pwt.sch.id",
-        "gambar" => "gambar.jfif"
+        "gambar" => "bumi.jpg"
     ]);
 });
 
 Route::get('/gallery', function() {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
